@@ -1,0 +1,44 @@
+Próximos passos: 
+ - Calcular tempo de resposta apenas das requisições, excluindo escritas no stdout.
+
+Doc:
+
+- curl: comando de CLI para transferir dados através de algum protocolo específico (HTTP, HTTPS, FTP). Por default, curl manda um GET HTTP.
+- Após encerrar o servidor, a porta fica ocupada por alguns minutos, é normal.
+
+- Dúvida: Cliente abre várias conexões ou apenas uma e manda uma enxurrada de requisições?
+
+Pontos de atenção do servidor:
+
+ - Backlog size: Representa o número de requisições abertas antes que as novas sejam recusadas.
+ - Sleep dentro do handle_client: Para simular uma carga de trabalho bloqueante. -> WORKLOAD
+
+Arquitetar solução de testes:
+
+1 cliente envia 1000 conexões
+Todas tratadas enfileiradas e tratadas sequencialmente pelo servidor
+Entender meus casos de teste...
+Um gráfico surge a partir de vários casos de teste.
+
+Parâmetros de entrada:
+1- NRequisições
+2- NThreads
+3- Workload
+
+Parâmetro medido:
+1- Tempo de resposta (Para realização de todas as requisições)
+
+Grandezas calculadas:
+Aceleração: A(n, t) = Ts( n ) / Tp(n, t)
+	- A aceleração indica quão mais rapido ficou a versao concorrente (2x, 3x, 3,5x, etc),
+
+Eficiência: E(n, t) = A(n, t)/t
+	- A eficiência indica quão bem (ou eficienetemente) a versao concorrente se beneficia por estar usando mais de um fluxo de execução (então, se usa 2 fluxos e a aplicação acelera de 2, a eficiencia é de 1, ou de 100%, mas se acelera menos do que isso, então a eficiencia não foi tudo que poderia ser. Outro ponto de vista da medida de eficiencia é avaliar quanto o overhead (sobrecarga de comunicação, execução, acesso a memoria, etc) da concorrencia aumenta com o aumento da qtde de fluxos de execução.
+
+Gráficos:
+
+Tempo de resposta x nThreads (Curvas variando qtde de requisições)
+	- 1 gráfico
+
+Tempo de resposta x workload (Curvas variando qtde de requisições)
+	- 3 gráficos -> Variando o número de requisições

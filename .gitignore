@@ -1,0 +1,9 @@
+.vscode
+sequential/bin/*
+sequential/build/*
+client/build/*
+client/bin/*
+multithread/build/*
+multithread/bin/*
+multiplex/build/*
+multipĺex/bin/*

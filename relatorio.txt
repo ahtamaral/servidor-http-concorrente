@@ -1,0 +1,29 @@
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Byte Order:                           Little Endian
+Address sizes:                        39 bits physical, 48 bits virtual
+CPU(s):                               16
+On-line CPU(s) list:                  0-15
+Thread(s) per core:                   2
+Core(s) per socket:                   8
+Vendor ID:                            GenuineIntel
+CPU family:                           6
+Model:                                141
+Model name:                           11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+
+
+Descrever como o ganho de desempenho foi avaliado:
+Apresentar o conjunto de casos de teste usados para a avaliação de desempenho (lembrar de variar a dimensão dos dados de entrada e o número de threads utilizadas).
+Descrever a configuração da máquina onde os testes foram realizados (identificação do processador, quantidade de núcleos de execução, sistema operacional).
+Informar quantas vezes o mesmo caso de teste foi executado e qual medida de tempo foi escolhida (por exemplo, repetir a execução pelo menos 5 vezes, utilizando o menor tempo ou o tempo médio).
+Mostrar o cálculo da aceleração.
+Apresentar os resultados obtidos, condensados em forma de tabelas ou gráficos.
+Não incluir capturas de tela da execução. O objetivo aqui é apresentar os resultados finais obtidos (tempo de execução e aceleração).
+
